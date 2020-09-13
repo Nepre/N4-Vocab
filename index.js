@@ -55,7 +55,8 @@ function init(){
                 document.getElementById("next").href = "index.html?p=" + (page+1);
 
         }
-        
+        if(isNaN(page)) page = 0;
+        document.getElementById("pageNum").innerHTML = page + 1;
         document.getElementById("end").href = "index.html?p="+end;
     });
 }
