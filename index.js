@@ -1,7 +1,7 @@
 var items = 18;
 
 function filltable(){
-    $.getJSON('../verbs.json', function(data) {
+    $.getJSON('verbs.json', function(data) {
         var count = Object.keys(data).length;
         const params = new URLSearchParams(document.location.search);
         page = parseInt(params.get("p"));
