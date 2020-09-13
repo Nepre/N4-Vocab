@@ -43,7 +43,7 @@ function init(){
             document.getElementById("pageNum").innerHTML = 1;
         }
         else{
-            document.getElementById("pageNum").innerHTML = page +1;
+            document.getElementById("pageNum").innerHTML = page + 1;
             if(parseInt(page-1) < 1)
                 document.getElementById("prev").href = "index.html";
             else
