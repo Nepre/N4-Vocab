@@ -17,44 +17,40 @@
         <div class="text-3xl">N4 Vocabulary</div>
         <div><hr></div>
         <div class="pl-6 text-lg text-left text-gray-500">
-            <div class="pt-6"><a href=""><span class="text-teal-400">●</span> Verbs</a></div>
+            <div class="pt-6"><a href="index.html"><span class="text-teal-400">●</span> Verbs</a></div>
             <div class="pt-6"><a href=""><span class="text-orange-400">●</span> Nouns</a></div>
             <div class="pt-6"><a href=""><span class="text-orange-400">●</span> Nouns 2</a></div>
             <div class="pt-6"><a href=""><span class="text-green-400">●</span> Adjectives</a></div>
             <div class="pt-6"><a href=""><span class="text-red-400">●</span> Adverbs</a></div>
+            <div class="pt-6 text-purple-400"><a href="exam.html">● Exam</a></div>
         </div>
         
     </div>
    
-    <div class="flex-1 hper text-gray-400 text-center bg2 px-4 py-2 mx-20">
-        <div class="">From <span id="f1" class="font-bold"></span> to <span id="f2" class="font-bold"></span> </div>
-        <div class="flex items-center">
-            <table class="table-auto flex-1">
-                <thead>
-                    <tr>
-                        <th class="px-4 py-2">Pronunciation</th>
-                        <th class="px-4 py-2">Meaning</th>
-                        <th class="px-4 py-2">Kanji</th>
-                    </tr>
-                </thead>
-                <tbody id="tb2" class="text-sm">
-                    <tr>
-    
-                    </tr>
-                </tbody>
-            </table>
+    <div id="mainDiv" class="flex-1 hper text-gray-400 text-center bg2 px-4 py-2 mx-20">
+        <div class="text-5xl font-bold">Exam</div>
+        <div class="text-3xl font-bold">Question <span id="one" class="font-bold">1</span> out of <span id="many" class="font-bold">10</span></div>
+        <div class="text-left text-4xl mt-16">
+            <div class="ml-16" id="quest"></div>
+            <div class="ml-16 text-xl">Choose the option which most resembles to the meaning of the text above. You <b>cannot</b> go back.</div>
+            <div class="ml-32">
+                <ul class="list-disc mt-5">
+                    <li class="mt-2 hover:text-gray-600" id="op0" onclick="changeSelected(0)"></li>
+                    <li class="mt-2 hover:text-gray-600" id="op1" onclick="changeSelected(1)"></li>
+                    <li class="mt-2 hover:text-gray-600" id="op2" onclick="changeSelected(2)"></li>
+                    <li class="mt-2 hover:text-gray-600" id="op3" onclick="changeSelected(3)"></li>
+                </ul>
+           </div>
         </div>
-        <div class="text-2xl">
-            <a id="start" href="index.html">«</a>
-            <a id="prev" href="">&#60</a>
-            <a id="next" href="">&#62</a>
-            <a id="end" href="">»</a>
+        <div class="right-0.bottom-0 text-right pr-20 mt-10">
+            <button onclick="nextQuestion()" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
+                Next
+            </button>
         </div>
-        
     </div>
     
 </body> 
 <script>
-    init();
+    exam();
 </script>
 </html>
