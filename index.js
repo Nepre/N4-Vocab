@@ -40,8 +40,10 @@ function init(){
         if(page == null || isNaN(page)){
             document.getElementById("prev").href = "index.html";
             document.getElementById("next").href = "index.html?p=1";
+            document.getElementById("pageNum").innerHTML = 1;
         }
         else{
+            document.getElementById("pageNum").innerHTML = page +1;
             if(parseInt(page-1) < 1)
                 document.getElementById("prev").href = "index.html";
             else
@@ -53,6 +55,7 @@ function init(){
                 document.getElementById("next").href = "index.html?p=" + (page+1);
 
         }
+        
         document.getElementById("end").href = "index.html?p="+end;
     });
 }
