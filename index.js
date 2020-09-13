@@ -14,7 +14,6 @@ function filltable(){
         if(isNaN(page) || page == null) page = 0;
         let i;
         let start = page*items;
-        console.log(count);
         for (i = start; i < start + items && i < count; i++) {
             document.getElementById("tb2").innerHTML+=
             "<tr class='border-t-2 border-gray-500'>"
@@ -35,7 +34,7 @@ function init(){
     const params = new URLSearchParams(document.location.search);
     $.getJSON('verbs.json', function(data) {
         var count = Object.keys(data).length;
-        console.log(parseInt(params.get("p")));
+        //console.log(parseInt(params.get("p")));
         page = parseInt(params.get("p"));
         let end = Math.floor(count/items);
         if(page == null || isNaN(page)){
@@ -78,7 +77,7 @@ function exam(){
         var answ = [-1, -1, -1, -1];
         answ[rquest] = quest;
         correctAnswer = rquest;
-        console.log(correctAnswer);
+        //console.log(correctAnswer);
         examQuestions.push([(data[quest].pron + kanji), (data[quest].mean), false]);
         for (let i = 0; i < 4; i++) {
             let b;
